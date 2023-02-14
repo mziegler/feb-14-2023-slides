@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style type="text/css">
+		    ul {
+              margin: 0;
+            }
+            ul.dashed {
+              list-style-type: none !important;
+            }
+            ul.dashed > li {
+              text-indent: -5px;
+            }
+            ul.dashed > li:before {
+              content: "\2014\a0";
+              text-indent: -5px;
+            }
+
+            img {
+                border: 0 !important;
+                box-shadow: none !important;
+            }
+
+            #comparison-table {
+                font-size: 70%;
+                text-align: center;
+            }
+            #comparison-table td {
+                text-align: center;
+                padding: 0.8em;
+            }
+            #comparison-table tr.fragment td {
+                border-bottom: 0px !important;
+            }
+            #comparison-table tr.fragment.visible td  {
+                border-bottom: 1px solid !important;
+            }
+
+
+            .sms-convo {
+                font-size: 50%;
+                border-radius: 10px;
+            }
+
+            .sms-convo.sms-convo-nurse {
+	            position: relative;
+	            background: #fafafa;
+	            border: 2px solid #c4c4c4;
+            }
+            .sms-convo.sms-convo-nurse:after, .sms-convo.sms-convo-nurse:before {
+	            right: 100%;
+	            top: 50%;
+	            border: solid transparent;
+	            content: " ";
+	            height: 0;
+	            width: 0;
+	            position: absolute;
+	            pointer-events: none;
+            }
+
+            .sms-convo.sms-convo-nurse:after {
+	            border-color: rgba(250, 250, 250, 0);
+	            border-right-color: #fafafa;
+	            border-width: 20px;
+	            margin-top: -20px;
+            }
+            .sms-convo.sms-convo-nurse:before {
+	            border-color: rgba(196, 196, 196, 0);
+	            border-right-color: #c4c4c4;
+	            border-width: 23px;
+	            margin-top: -23px;
+            }
+
+            .sms-convo.sms-convo-patient {
+	            position: relative;
+	            background: #DCF8C6;
+	            border: 2px solid #b3d1ab;
+            }
+            .sms-convo.sms-convo-patient:after, .sms-convo.sms-convo-patient:before {
+	            left: 100%;
+	            top: 50%;
+	            border: solid transparent;
+	            content: " ";
+	            height: 0;
+	            width: 0;
+	            position: absolute;
+	            pointer-events: none;
+            }
+
+            .sms-convo.sms-convo-patient:after {
+	            border-color: rgba(200, 224, 193, 0);
+	            border-left-color: #DCF8C6;
+	            border-width: 10px;
+	            margin-top: -10px;
+            }
+            .sms-convo.sms-convo-patient:before {
+	            border-color: rgba(179, 209, 171, 0);
+	            border-left-color: #b3d1ab;
+	            border-width: 13px;
+	            margin-top: -13px;
+            }
+            
+            
+   			#roadmap {
+					font-size:90%;
+					border-spacing: 1px;
+					border-collapse: collapse;
+					margin-top:1em;
+				}
+				
+				#roadmap tr td:last-child {
+					border-top-right-radius:10px;
+					border-bottom-right-radius:10px;
+					padding-right:1em;
+				}
+				
+				#roadmap tr td:first-child {
+					border-top-left-radius:10px;
+					border-bottom-left-radius:10px;
+					padding-left:1em;
+				}
+
+			
+				#roadmap tr.selected td, #roadmap tr td.selected {
+					color: #060b15 !important;
+					background-color: #FFFFFF;
+				}
+				
+				
+			
+				#roadmap td {
+					/*border: solid 10px white;*/
+					border: 0;
+
+					/*background-color: #f7f3de/*#EEE*/;
+				}
+				
+				#roadmap td.vert {
+					writing-mode: vertical-rl; 
+					font-size:80%; 
+					padding-right:1.5em;
+					padding-left:0.5em;
+					padding-top:-0.5em
+				}
+				
+				.vs-colored span{color:#961316 !important}
+				
+				blockquote.poaching-blockquote {
+					background:rgba(20, 20, 20, 1); 
+					padding-left:1em; 
+					padding-right:1em; 
+					font-size:70%; 
+					width:90%; 
+					margin-top:0; 
+					margin-left:auto; 
+					border: solid 1px #444
+				}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<style>
+					img#portrait{
+					width: 100%;
+					max-width: 120px;
+					margin-bottom: -10px;
+					height: auto;
+					display: inline-block;
+					margin-left: 0.2em;
+					border-radius: 1000px;
+					border: solid 3px #222 !important;}
+					</style>
+					
+					<h3 style="display:inline-block">Matt Ziegler</h3>
+					
+					<img id="portrait" src="img/portrait.jpg">
+					
+					<br>
+					
+					<img style="width:100px; height:auto; padding-left:0.2em" src="img/ocean-nexus.jpg">
+					<!--<img style="width:180px; height:auto; padding-left:1em" src="img/ictd-lab-logo.png">-->
+					<img style="width:320px; height:auto; margin-left:0.5em;" src="img/allen-school.png">
+				</section>
+				
+				
+				<section data-background-image="img/ussd-jiko-wide-toppadded.jpg">
+						
+						<h3>ICT4D: Mobile phones in "development"</h3>
+						<div class="stretch"></div>
+				</section>
+				
+				
+
+				<section data-background-image="img/ussd-jiko-wide-toppadded.jpg">
+						<!--<h3>ICT4D: Mobile phones in "development"</h3>-->
+						<div class="stretch">
+						<div style="background:rgba(255,255,255,1); border-radius:4px; padding: 2em; margin-top:1em;">
+							<small>Phone-based development projects</small>
+							<h3>Example Problems</h3>
+
+							<ul class="dashed" style="margin-top:1em">
+								<li class="fragment">Technology access disparities 
+									<div style="margin-left:2em">&rarr; reinforce inequities</div>
+								</li>
+								<li class="fragment">Top-down control</li> 
+								<li class="fragment">Formalization</li>
+								<li class="fragment">Discrimination in online spaces</li>
+							</ul>
+						</div>
+						</div>
+				</section>
+				
+				<section>
+				
+					<style>
+						.oceantech-block, .cs-block{
+							font-size:60%;
+							background-color:rgba(106,164,176,0.5);
+							margin-bottom: 6px;
+							padding:10px;
+							border-radius:5px;
+						}
+						
+						.oceantech-block h4, .cs-block h4 {
+							margin-bottom:8px;
+							margin-top:12px;
+
+						}
+						
+						.oceantech-block ul, .cs-block ul{
+							display:block;
+						}
+					</style>
+				
+					<div class="stretch" style="vertical-align: middle">
+					<div style="height:100%; width:45%; display:inline-block; background-color:#fff;vertical-align: middle">
+					
+					<h4>Ocean Tech Initiatives</h4>
+					
+					<div class="oceantech-block" style="background-color:rgba(106,164,176,0.5);">
+						<h4>Mobile apps</h4>
+						<ul class="dashed">
+							<li>IUU / catch data / monitoring</li>
+							<li>information services, extension</li>
+						</ul>
+					</div>
+					
+					<div class="oceantech-block" style="background-color:rgba(106,164,176,0.4);">
+						<h4>AI</h4>
+						<ul class="dashed">
+							<li>predictive enforcement</li>
+							<li>project/resource targeting</li>
+						</ul>
+					</div>
+					
+					<div class="oceantech-block" style="background-color:rgba(106,164,176,0.3);">
+						<h4>Blockchain</h4>
+						<ul class="dashed">
+							<li>fish traceability</li>
+							<li>carbon offset verification</li>
+						</ul>
+					</div>
+					
+					<div class="oceantech-block" style="background-color:rgba(106,164,176,0.2);">
+						<h4>Internet of Things</h4>
+						<ul class="dashed">
+							<li>&ldquo;Smart oceans&rdquo;</li>
+						</ul>
+					</div>
+					
+					<div class="oceantech-block fragment" style="background-color:#2b4560;color:white">
+						<h4 style="color:white">???</h4>
+					</div>
+
+					
+					
+					</div>
+					<div style="vertical-align:middle; display:inline-block; height:100%">&#x21c4;</div>
+					
+					
+					
+					<div style="height:100%; width:45%; display:inline-block; background-color:#fff;vertical-align: middle">
+					<h4>Computer Science Topics</h4>
+					
+					
+					<div class="cs-block" style="background-color:rgba(176, 141, 106,0.6)">
+						<h4>Human-Computer Interaction</h4>
+						<ul class="dashed">
+							<li>Critical HCI theory</li>
+							<li>Feminist HCI</li>
+							<li>Social computing</li>
+							<li>Usable security</li>
+							<li>Accesability</li>
+						</ul>
+					</div>
+					
+					<div class="cs-block" style="background-color:rgba(176, 141, 106,0.5)">
+						<h4>eCivics / Digital Democracy</h4>
+					</div>
+					
+					<div class="cs-block" style="background-color:rgba(176, 141, 106,0.4)">
+						<h4>ICT4D / Computing for &ldquo;Development&rdquo;</h4>
+					</div>
+					
+					<div class="cs-block" style="background-color:rgba(176, 141, 106,0.3)">
+						<h4>Algorithmic Fairness</h4>
+					</div>
+					
+					<div class="cs-block" style="background-color:rgba(176, 141, 106,0.2)">
+						<h4>Tech Policy</h4>
+					</div>
+					
+				
+					
+					</div>
+					
+					
+					
+					</div>
+				</section>
+				
+				
+				
+				<section>
+					<h3>Project #1: Policy tool</h3>
+					<small>Model: Digital Development Principles</small><br>
+					<img src="img/Digitalprinciples.png" style="margin:0" class="stretch">
+				</section>
+				
+				
+				<section>
+					<h4 style="margin-bottom:1em">Project #2: Reimagining app-based fishery certification</h4>
+					<img src="img/pescadata-logo.jpg" style="width:200px; height: auto; display:inline-block; vertical-align:middle; margin-right:1em">
+					
+					<img src="img/pescadata-screenshot.png" style="margin:0; border:solid 2px #999 !important; display: inline-block; width: 30%; height:auto; vertical-align:middle">
+					
+				</section>
+				
+				
+			</div>
+		</div>
+		
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				],
+				progress: false,
+				hash: true,
+				pdfSeparateFragments: false,
+				controls:false,
+				showSlideNumber: 'all',
+				slideNumber: true,
+				transition:'fade',
+			});
+		</script>
+	</body>
+
+</html>
