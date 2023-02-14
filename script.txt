@@ -1,0 +1,56 @@
+I'm starting a new fellowship at the Ocean Nexus Center and I'm really excited. Just want to briefly introduce myself and the projects I'm starting with.
+
+I'm in the Computer Science department here at UW, in the ICTD lab which focuses on mobile-phone initiatives in low infrastructure places, usually in economically-developing regions. Our lab is most well-known for developing Open Data Kit, which maybe some of you have used or heard of.
+
+---------------
+
+My PhD work was trying to take some of these lessons from mobile-phone initiatives in traditional "development" sectors like public health, and bring them into the environmental sector. Working with this wildlife conservancy in Kenya, we were trying to use basic mobile phone services like SMS hotlines to open up communication channels with the surrounding villages. For example, this photo shows a little application we made to help coordinate their fuel-efficient cookstove-building program.
+
+--------------------
+
+So to prime you for what I'll talk about next, I want to hilight some of the common problems with these kinds of projects.
+
+- One is disparities in technology access. People having more wealth, power, and privalege tend to have better technology access, so initiatives that rely on mobile phones to reach their target communities often end up reinforcing these disparities.
+
+- Technology initiatives in apps, with their sort of inflexibility after they've been developed, tend to bring more top-down control into community-focused projects. And they often bring all kinds of accountability mechanisms, like things to monitor workers, or make people collect data for the managers to use or send to donors.
+
+- And often when bringing people together for online interactions, there is often discriminatory dynamics in these online spaces as well.
+
+
+--------------------------
+
+So these equity and social justice problems brought about by these technology initiatives are actually fairly well documented and discussed in computer science research literature.
+
+Using critical lenses like feminism to study human-computer interaction, and considering how technology designs affect the emergent social phenomena. This slide lists some of the relevant research communities on the right side.
+
+One of the main goals of my fellowship here is to start talking about how we can bring these critical ideas from human-computer interaction research into some of the technology projects in this space. Like, what kinds of inequities might we see in projects that use AI for predictive fishing enforcement, for example.
+
+--
+
+One way we could use some help is just to understand the range of different ocean technology initiatives that organizationsa are trying. I'll send out an email about this; I would love if people could pass along information about different ocean technology applications you hear about.
+
+
+
+
+----------------------------
+
+
+So, one of the specific projects we're starting with is about re-imagining fisheries certification projects that use mobile apps. Right now, there are all these projects where fishers enter some data about their catch every day, and then some external agency recieves the data and claims to certify the fishery's sustainability, using this top-down structure. We're going to work with an NGO called Communidad y Biodiversidad on their app, to try to restructure this in a way that gives more power to fishing communities. From what I've gathered so far, they're already doing a lot of good work on this problem and I'm excited to see where I can be helpful.
+
+
+-----------------------------
+
+
+In a second project, we're going to develop a policy tool to encourage policymakers and NGO executives to think more about equity issues in the technology projects that they persue.
+
+So far, we're thinking about modeling it after these Digital Development Principals, which were widely adopted by the Red Cross and a bunch of these kinds of big players in the development sector. The Digital Development Principals are mostly intended to cut back on waste, and technology projects that are just ineffective, which I think is also a big problem in the environmental sector. But they don't really directly address these equity issues, and that's why we're going to develop something of our own instead of just pushing organizations to adopt these.
+
+
+So I'm really eager to interact with all of you and hear what you think about this. Thanks for listening to my presentation.
+
+
+
+
+
+
+
